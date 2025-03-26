@@ -1,0 +1,36 @@
+# iColonEpithelium
+This is a part of the CyberGut project, aiming at constructing a tissue-specific GEM of colon epithelium .
+Each folder contains code corresponding to the method steps described in the methods section of the manuscript.
+
+## Step 1
+### Download datasets used in this project refered to the file "/Input_datasets/Human colon epithelium transcriptome datasets.xlsx"
+
+## Step 2
+### Follow the code "/Input_data_process/Gene_expression_data_process_code.R" to processed the downlaod datasets
+
+## Step 3
+### Follow the tutorial of the corss-platfram normalization tool Shambhala2 (https://github.com/BorisovNM/Shambhala2) to normalize all datasets, which will produce the file "/Input_data_process/geneset_final.csv" 
+
+## Step 4
+### Follow the code "/Input_data_process/Ubiquity_score_calculation.R" to calculate Ubiquity score and Expressionset, which will produce file "/Input_data_process/Ubiquity_Score.txt" and "/Input_data_process/Expressiondata.csv"
+
+## Step 5
+### Follow the tutorial of iMAT&tINIT (https://github.com/BioSystemsUM/troppo), CORDA (https://github.com/resendislab/corda) and pymcadre(https://github.com/draeger-lab/pymCADRE) to manually prepare input files for these four tools, which were save at "Draft_reconstruction_inputs/"
+
+## Step 6
+### Follow the code in "Code_of_Draft_Reconstructions/" to build 4 draft reconstructions and code "/Code_of_Consensus_Reconstruction/Consensus_Reconstruction.ipynb" to build consensus reconstruction.
+
+## Step 7
+### Follow code "/Code_of_Metabolic_Task_Testing/metabolic_task.ipynb" to run metabolic task test of the consensus reconstruction and manually corate the consensus reconstruction to build our iColonEpithelium reconstrction 
+
+## Step 8
+### Download two dataset for case study: Crohn's Disease (CD: GSE164985) and ulcerative colitis (UC: Single Cell Portal (SCP259)), and follow code "/Code_of_Case_Studies/CD.R" and "/Code_of_Case_Studies/UC.R" to process single cell RNAseq data, extract colonocyte data and prepara input for iMAT the same as Step 5;
+
+## Step 9
+### Follow code "/Code_of_Case_Studies/Context-specific_reconsturctions_imat.m" to build  reconstructions
+
+## Step 10
+### Follow code "/Code_of_Case_Studies/Case_sutdy.ipynb" to analyze reconstructions obtained in the previous step.
+
+## Step 11
+### Follow code "/Code_of_Case_Studies/Case_sutdy.ipynb" to analyze reconstructions obtained in the previous step.
